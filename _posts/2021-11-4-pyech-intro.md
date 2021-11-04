@@ -1,15 +1,17 @@
 ---
-layout: post
-title: Introducción a PyECH
+title: "Introducción a PyECH"
 date: 2021-11-04
-tags: oss open source
+excerpt_separator: "<!--more-->"
+tags:
+  - open source
+  - python
 ---
 
 > Procesamiento de la ECH del INE en Python
 
 *TL;DR*: [https://cpa-analytics.github.io/pyech](cpa-analytics.github.io/pyech) para uso básico mediante una interfaz gráfica, o [https://github.com/cpa-analytics/pyech](https://github.com/cpa-analytics/pyech) para uso avanzado.
 
-----
+<!--more-->
 
 La Encuesta Continua de Hogares (ECH) del Instituto Nacional de Estadística es la fuente más importante de información socieconómica de las personas y hogares en Uruguay, cubriendo dimensiones que van desde el nivel educativo de las personas hasta la calidad de la vivienda en la que viven. Existe desde por lo menos 1981, pero su versión actual permanece razonablemente estable desde 2006<sup>1</sup>. Desde entonces, la ECH tiene unas 400-500 variables y unos 120-150 mil registros.
 
@@ -36,7 +38,7 @@ Pero lo más interesante de que PyECH esté escrita en un lenguaje de código ab
 2. Esto no es estrictamente cierto, como el propio PyECH demuestra. Es decir, es posible leer archivos SAV sin SPSS, lo que no implica que sea fácil.
 3. ```python
    from pyech import ECH
-   
+
    survey = ECH()
    survey.load(2013, weights="pesoano") # Descarga la ECH 2013 desde la web del INE, descomprime el .rar y lee el .sav correspondiente a hogares y personas.
    survey.summarize("pobpcoac", by=["e26", "dpto"], aggfunc="count")
