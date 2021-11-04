@@ -9,7 +9,7 @@ tags:
 
 > Procesamiento de la ECH del INE en Python
 
-*TL;DR*: [https://cpa-analytics.github.io/pyech](cpa-analytics.github.io/pyech) para uso básico mediante una interfaz gráfica, o [https://github.com/cpa-analytics/pyech](https://github.com/cpa-analytics/pyech) para uso avanzado.
+*TL;DR*: [Creamos una webapp para hacer estimaciones puntuales de la Encuesta Continua de Hogares](cpa-analytics.github.io/pyech) que está construida sobre [un paquete de Python que contiene funcionalidad adicional](https://github.com/cpa-analytics/pyech).
 
 <!--more-->
 
