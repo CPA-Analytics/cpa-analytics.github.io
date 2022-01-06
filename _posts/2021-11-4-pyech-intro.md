@@ -9,7 +9,7 @@ tags:
 
 > Procesamiento de la ECH del INE en Python
 
-*TL;DR*: [Creamos una webapp para hacer estimaciones puntuales de la Encuesta Continua de Hogares](cpa-analytics.github.io/pyech) que está construida sobre [un paquete de Python que contiene funcionalidad adicional](https://github.com/cpa-analytics/pyech).
+*TL;DR*: [Creamos una webapp para hacer estimaciones puntuales de la Encuesta Continua de Hogares](https://cpa-analytics.github.io/pyech) que está construida sobre [un paquete de Python que contiene funcionalidad adicional](https://github.com/cpa-analytics/pyech).
 
 <!--more-->
 
