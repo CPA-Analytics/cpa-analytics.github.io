@@ -39,9 +39,7 @@ Esto quiere decir que, por ejemplo, calcular la cantidad de desocupados por sexo
 
 Pero lo más interesante de que PyECH esté escrita en un lenguaje de código abierto es que las licencias de software se vuelven innecesarias, y que disponibilizarla para que otros la puedan usar es simple. En ese sentido, la librería puede ser usada como [una librería más en Python](https://pypi.org/project/pyech/), dentro de [Google Colab](https://colab.research.google.com/github/CPA-Analytics/pyech/blob/master/examples/example.ipynb) y otras soluciones online de notebooks, que permiten escribir y ejecutar Python sin descargar ni instalar nada, o en la [interfaz gráfica](https://cpa-analytics.github.io/pyech/) construida para mostrar sus prinicpales funciones.
 
-En el pipeline de desarrollo tenemos planeados dos hitos:
-* Incorporar desvíos estándar como complemento a las estimaciones puntuales (sugerencia de [@jpferreira2311](https://twitter.com/jpferreira2311)).
-* Incluir las [ECH compatibilizadas del IECON](http://fcea.edu.uy/portada-ech-compatibilizadas.html).
+En el pipeline de desarrollo tenemos planeado incorporar desvíos estándar como complemento a las estimaciones puntuales (sugerencia de [@jpferreira2311](https://twitter.com/jpferreira2311)).
 
 ----
 1. [La ECH 2020 y posteriores representan un cambio frente a las de 2006-2019](https://www.ine.gub.uy/c/document_library/get_file?uuid=359cba03-b448-400f-9e5b-10136bdfb519&groupId=10181).
