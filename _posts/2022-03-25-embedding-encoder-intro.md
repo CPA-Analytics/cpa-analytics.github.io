@@ -42,7 +42,7 @@ Since this is just a demo of the capabilities of Embedding Encoder we will just 
 
 Do not forget to install Embedding Encoder from PyPI!
 
-```python
+```bash
 pip install embedding-encoder[full]
 ```
 
@@ -54,7 +54,7 @@ import numpy as np
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder, StandardScaler, OrdinalEncoder
 from sklearn.pipeline import make_pipeline
-from sklearn.model_selectionimport train_test_split
+from sklearn.model_selection import train_test_split
 from sklearn.impute import SimpleImputer
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
@@ -87,7 +87,6 @@ But before building a pipeline, we have to create three lists of columns to use 
 categorical_high = ["Store", "CompetitionOpenSinceYear", "CompetitionOpenSinceMonth", "DayOfWeek"]
 categorical_low = ["Open", "Promo", "SchoolHoliday", "Promo2", "StateHoliday", "StoreType", "Assortment"]
 numeric = ["Customers", "CompetitionDistance"]
-
 ```
 
 Now we can start building our pipelines to compare. We can easily create a function to build them and use a parameter to differentiate the Embedding Encoder from the Ordinal Encoder one. 
@@ -124,13 +123,12 @@ ordinal_preds = ordinal_pipeline.predict(X_test)
 When we calculate and print these metrics, we get the following results: 
 
 ```
-**Model using Ordinal Encoder**
+Model using Ordinal Encoder:
 Root Mean Squared Error: 579.9272913513555
-
 ```
 
 ```
-**Model using Embedding Encoder**
+Model using Embedding Encoder:
 Root Mean Squared Error: 554.4734797807192
 
 ```
