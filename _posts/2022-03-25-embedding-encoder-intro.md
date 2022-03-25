@@ -139,7 +139,7 @@ Et voila! Embedding Encoder performed marginally better than ordinal encoder,  a
 
 The generated embeddings can be plotted in a 2D space in order to understand whether the encoder could extract actual value from the categorical features. This requires seaborn, which can be easily installed separately or by using the [full] or [sns] parameters in pip install for Embedding Encoder.
 
-![Untitled](Get%20the%20mo%203117a/Untitled%201.png)
+![Weekday embeddings plot](https://raw.githubusercontent.com/cpa-analytics/embedding-encoder/main/embedding_encoder/examples/embeddings_plot_example.png)
 
 ## Customizing embedding encoder 
 
