@@ -32,6 +32,10 @@ Although Python implementations of this approach have surfaced over the years, w
 
 ![Embedding Encoder logo](https://raw.githubusercontent.com/cpa-analytics/embedding-encoder/main/logo.png)
 
+* [Github](https://github.com/cpa-analytics/embedding-encoder)
+* [Documentation](https://embedding-encoder.readthedocs.io/en/latest/)
+* [PyPI](https://pypi.org/project/embedding-encoder/)
+
 Embedding Encoder is a scikit-learn-compliant transformer that converts categorical variables into numeric vector representations. This is achieved by creating a small multilayer perceptron architecture in which each categorical variable is passed through an embedding layer, for which weights are extracted and turned into DataFrame columns. 
 
 We will go through the code in a [notebook created to showcase the usefulness of the library](https://github.com/cpa-analytics/embedding-encoder/blob/main/embedding_encoder/examples/rossmann.ipynb) that builds a model for the Rossman Store Sales dataset from Kaggle, by using it to process high cardinality categorical columns . Then, we compare the performance of this approach to an alternative in which high cardinality features are transformed with scikit-learn’s Ordinal Encoder. 
