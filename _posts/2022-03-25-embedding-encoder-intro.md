@@ -7,8 +7,6 @@ tags:
   - python
 ---
 
-# Get the most out of your categorical features and improve model performance with Embedding Encoder
-
 <!--more-->
 ## Dealing with categorical features
 
