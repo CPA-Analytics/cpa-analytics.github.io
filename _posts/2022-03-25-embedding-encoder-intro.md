@@ -131,7 +131,6 @@ Root Mean Squared Error: 579.9272913513555
 ```
 Model using Embedding Encoder:
 Root Mean Squared Error: 554.4734797807192
-
 ```
 
 Et voila! Embedding Encoder performed marginally better than ordinal encoder,  albeit the pipeline that uses embeddings takes more time to run. The interesting thing about this is the fact that this is the tip of the iceberg in terms of improving the performance of the model and Embedding Encoder is a tool with lots of capabilities.
