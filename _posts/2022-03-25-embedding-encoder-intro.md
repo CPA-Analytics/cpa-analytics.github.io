@@ -97,13 +97,16 @@ Now we can start building our pipelines to compare. We can easily create a funct
 ```python
 def build_pipeline(mode: str):
 if mode == "embeddings":
-        high_cardinality_encoder = EmbeddingEncoder(task="regression")
+    high_cardinality_encoder = EmbeddingEncoder(task="regression")
 else:
-        high_cardinality_encoder= OrdinalEncoder()
+    high_cardinality_encoder= OrdinalEncoder()
     one_hot_encoder = OneHotEncoder(handle_unknown="ignore")
     scaler = StandardScaler()
-    imputer = ColumnTransformerWithNames([("numeric", SimpleImputer(strategy="mean"), numeric), ("categorical", SimpleImputer(strategy="most_frequent"), categorical_low+categorical_high)])
-    processor = ColumnTransformer([("one_hot", one_hot_encoder, categorical_low), (mode, high_cardinality_encoder, categorical_high), ("scale", scaler, numeric)])
+    imputer = ColumnTransformerWithNames([("numeric", SimpleImputer(strategy="mean"), numeric),
+                                          ("categorical", SimpleImputer(strategy="most_frequent"), categorical_low+categorical_high)])
+    processor = ColumnTransformer([("one_hot", one_hot_encoder, categorical_low),
+                                   (mode, high_cardinality_encoder, categorical_high),
+                                   ("scale", scaler, numeric)])
 return make_pipeline(imputer, processor, RandomForestRegressor())
 
 embeddings_pipeline = build_pipeline("embeddings")
