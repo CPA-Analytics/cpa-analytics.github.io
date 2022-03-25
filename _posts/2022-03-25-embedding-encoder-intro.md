@@ -20,11 +20,11 @@ Second, there is often no obvious relationship between different classes of a ca
 
 The way we were taught to deal with these situations is to one-hot encode the variable, so that each class becomes its own feature of 1s and 0s. However, with high cardinality features with a lot of unique values, one-hot encoding can lead to very sparse datasets, making it computationally inefficient to train models.
 
-The latter is a common challenge in natural language processing, because each word should get its own dummy variable.
+The latter is a common challenge in natural language processing, because each word would get its own dummy variable.
 
 ## Using embeddings outside of the field of natural language processing
 
-Word embedding is one of the most used techniques in the field of natural language processing (NLP). It consists on building trainable lookup tables that map words to numerical representations . This boosts the performance of the model compared to a simple frequency approach (i.e. counting how many times each word appears in the corpus) because embeddings retain the similarity between words in a chain of text. For example, the embedding representation of words such as “joy”, “happy” or “fun” oftentimes are very close. 
+Word embeddings is one of the most used techniques in the field of natural language processing (NLP). It consists on building trainable lookup tables that map words to numerical representations. This boosts the performance of the model compared to a simple frequency approach (i.e. counting how many times each word appears in the corpus) because embeddings retain the similarity between words in a chain of text. For example, the embedding representation of words such as “joy”, “happy” or “fun” oftentimes are very close. 
 
 While embeddings make the most sense in an unstructured text modeling environment, structured datasets with high cardinality categorical features  can benefit from a very similar technique called entity embedding, where each class of a categorical feature is mapped to a vector representation, leading to dense datasets that retain information about the similarity of the classes. This technique was popularized after [the team that landed in the 3rd place of the Rossmann Kaggle competition used it](https://www.kaggle.com/c/rossmann-store-sales/discussion/17974).
 
@@ -148,13 +148,14 @@ The network architecture can be modified to include more layers, wider layers, a
 
 ## Non-Tensorflow usage
 
-
 Tensorflow can be tricky to install on some systems, which could make Embedding Encoder less appealing if the user has no intention of using TF for modeling.
 
 There are actually two partial ways of using Embedding Encoder without a TF installation.
 
 Because TF is only used and imported in the EmbeddingEncoder.fit() method, once EE or the pipeline that contains EE has been fit, TF can be safely uninstalled; calls to methods like EmbeddingEncoder.transform() or Pipeline.predict() should raise no errors.
+
 Embedding Encoder can save the mapping from categorical variables to embeddings to a JSON file which can be later imported by setting pretrained=True, requiring no TF whatsoever. This also opens up the opportunity to train embeddings for common categorical variables on common tasks and saving them for use in downstream tasks.
+
 Installing EE without Tensorflow is as easy as removing "[tf]" from the install command.
 
 # Final remarks
